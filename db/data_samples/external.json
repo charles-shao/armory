@@ -1,0 +1,138 @@
+{
+  "models": [
+    {
+      "name": "Intercessor Squad",
+      "category": "Troop",
+      "min_size": 5,
+      "max_size": 10,
+      "units": [
+        {
+          "name": "Intercessor",
+          "points": 20,
+          "power": 1,
+          "movement": 6,
+          "weapon_skill": 3,
+          "ballistic_skill": 3,
+          "strength": 4,
+          "toughness": 4,
+          "wounds": 2,
+          "attacks": 2,
+          "leadership": 7,
+          "sv": 3,
+          "invulnerable_save": null,
+          "ranged_invulnerable_save": null,
+          "melee_invulnerable_save": null,
+          "fnp": null,
+          "mortal_fnp": null,
+          "wound_regen": null,
+          "revivable": false,
+          "weapons": [
+            {
+              "name": "Bolt Rifle",
+              "points": 0,
+              "category": "Rapid Fire",
+              "attacks": 1,
+              "range": 30,
+              "strength": 4,
+              "armor_penetration": -1,
+              "damage": 1
+            },
+            {
+              "name": "Bolt Pistol",
+              "points": 0,
+              "category": "Pistol",
+              "attacks": 1,
+              "range": 12,
+              "strength": 4,
+              "armor_penetration": 0,
+              "damage": 1
+            },
+            {
+              "name": "Frag Grenades",
+              "points": 0,
+              "category": "Grenade",
+              "attacks": "D6",
+              "range": 6,
+              "strength": 3,
+              "armor_penetration": 0,
+              "damage": 1
+            },
+            {
+              "name": "Krak Grenades",
+              "points": 0,
+              "category": "Grenade",
+              "attacks": 1,
+              "range": 6,
+              "strength": 6,
+              "armor_penetration": -1,
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "name": "Intercessor Sergeant",
+          "points": 20,
+          "power": 1,
+          "movement": 6,
+          "weapon_skill": 3,
+          "ballistic_skill": 3,
+          "strength": 4,
+          "toughness": 4,
+          "wounds": 2,
+          "attacks": 3,
+          "leadership": 8,
+          "sv": 3,
+          "invulnerable_save": null,
+          "ranged_invulnerable_save": null,
+          "melee_invulnerable_save": null,
+          "fnp": null,
+          "mortal_fnp": null,
+          "wound_regen": null,
+          "revivable": false,
+          "weapons": [
+            {
+              "name": "Bolt Rifle",
+              "points": 0,
+              "category": "Rapid Fire",
+              "attacks": 1,
+              "range": 30,
+              "strength": 4,
+              "armor_penetration": -1,
+              "damage": 1
+            },
+            {
+              "name": "Bolt Pistol",
+              "points": 0,
+              "category": "Pistol",
+              "attacks": 1,
+              "range": 12,
+              "strength": 4,
+              "armor_penetration": 0,
+              "damage": 1
+            },
+            {
+              "name": "Frag Grenades",
+              "points": 0,
+              "category": "Grenade",
+              "attacks": "D6",
+              "range": 6,
+              "strength": 3,
+              "armor_penetration": 0,
+              "damage": 1
+            },
+            {
+              "name": "Krak Grenades",
+              "points": 0,
+              "category": "Grenade",
+              "attacks": 1,
+              "range": 6,
+              "strength": 6,
+              "armor_penetration": -1,
+              "damage": "D3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

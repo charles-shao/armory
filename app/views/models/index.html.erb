@@ -1,0 +1,46 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="row">
+    <div class="col">
+      <h1>Models</h1>
+    </div>
+  </div>
+
+  <div id="models" class="row">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% @models.each do |model| %>
+        <div class="col">
+          <div class="card bg-light">
+            <h5 class="card-header"><%= model.name %></h5>
+
+            <%= image_tag("intercessor.png", class: "card-img-top") %>
+
+            <div class="card-body">
+              <div class="card-title">
+                <dl class="row">
+                  <dt class="col-sm-6">Battlefield Role</dt>
+                  <dd class="col-sm-6"><%= model.category.humanize %></dd>
+
+                  <dt class="col-sm-6">Size</dt>
+                  <dd class="col-sm-6"><%= model.size_range %></dd>
+                </dl>
+              </div>
+              <div class="card-text">
+                <%= link_to "View statline and composition", model_units_path(model) %>
+              </div>
+              <p class="card-text"><small class="text-muted"><%= model.created_at %></small></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <br />
+  <div class="row">
+    <div class="col">
+      <%= link_to "New model", new_model_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

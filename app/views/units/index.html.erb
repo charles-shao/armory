@@ -1,0 +1,80 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="row">
+    <h1><%= @model.name %></h1>
+  </div>
+
+  <div id="units" class="row">
+    <% @units.each do |unit| %>
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <td>Name</td>
+            <td>Points</td>
+            <td>M"</td>
+            <td>WS</td>
+            <td>BS</td>
+            <td>S</td>
+            <td>T</td>
+            <td>W</td>
+            <td>A</td>
+            <td>Ld</td>
+            <td>Sv</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= unit.name %></td>
+            <td><%= unit.points %></td>
+            <td><%= unit.movement %></td>
+            <td><%= unit.ws %></td>
+            <td><%= unit.bs %></td>
+            <td><%= unit.strength %></td>
+            <td><%= unit.toughness %></td>
+            <td><%= unit.wounds %></td>
+            <td><%= unit.attacks %></td>
+            <td><%= unit.leadership %></td>
+            <td><%= unit.sv %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-sm" colspan="6">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Points</td>
+            <td>Type</td>
+            <td>Range</td>
+            <td>S</td>
+            <td>AP</td>
+            <td>D</td>
+            <td>Notes</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% unit.weapons.each do |weapon| %>
+            <tr>
+              <td><%= weapon.name %></td>
+              <td><%= weapon.points %></td>
+              <td><%= weapon.type %></td>
+              <td><%= weapon.range %></td>
+              <td><%= weapon.strength %></td>
+              <td><%= weapon.armor_penetration %></td>
+              <td><%= weapon.damage %></td>
+              <td><%= weapon.ability_notes %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+  <%# Statistics %>
+  <div class="row">
+
+  </div>
+  <%= link_to "New unit", new_unit_path, class: "btn btn-primary" %>
+  <%= link_to "Back", models_path, class: "btn btn-secondary" %>
+</div>

@@ -1,0 +1,2 @@
+class RosterModel < ApplicationRecord
+end

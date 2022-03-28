@@ -1,0 +1,12 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @unit %>
+
+  <div>
+    <%= link_to "Edit this unit", edit_unit_path(@unit), class: "btn btn-warning" %>
+    <%= link_to "Back to units", units_path, class: "btn btn-secondary" %>
+
+    <%= button_to "Destroy this unit", @unit, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>

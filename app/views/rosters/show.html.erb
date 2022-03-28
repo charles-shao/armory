@@ -1,0 +1,30 @@
+<div class="container">
+  <h1><%= @roster.name %></h1>
+  <h2><%= @roster.faction %></h2>
+
+  <div class="row">
+    <div class="accordion">
+      <% Model.categories.each do |(category, index)| %>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="<%= "panelsStayOpen-#{index}" %>">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="<%= "#panelsStayOpen-collapse-#{index}" %>" aria-expanded="true" aria-controls="<%= "panelsStayOpen-collapse-#{index}" %>">
+              <%= category.humanize.upcase %>
+            </button>
+          </h2>
+          <div id="<%= "panelsStayOpen-collapse-#{index}" %>" class="accordion-collapse collapse" aria-labelledby="<%= "panelsStayOpen-#{index}" %>">
+            <div class="accordion-body">
+              <%= link_to "Add model", roster_roster_models_path(@roster) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <br />
+  <div>
+    <%= link_to "Edit this roster", edit_roster_path(@roster), class: "btn btn-warning" %>
+    <%= link_to "Back to rosters", rosters_path, class: "btn btn-secondary" %>
+    <%# button_to "Destroy this roster", @roster, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>

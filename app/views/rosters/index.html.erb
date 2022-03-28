@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Roster list</h1>
+
+  <div id="rosters">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Faction</td>
+          <td></td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @rosters.each do |roster| %>
+          <tr>
+            <td><%= roster.name %></td>
+            <td><%= roster.faction %></td>
+            <td><%= link_to "Show", roster %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to "New roster", new_roster_path, class: "btn btn-primary" %>
+</div>
